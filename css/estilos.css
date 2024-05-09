@@ -1,0 +1,13 @@
+#cuerpo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border: black 5px;
+}
+#footer {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    background-color: gray;
+    border: 2px blue;
+    color: rgb(255, 255, 255);
+}
