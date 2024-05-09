@@ -1,2 +1,2 @@
-# Proyecto-Estad-as
+# Proyecto-Estadias
 Proyecto para documentar la red fisica en Diagnocons
