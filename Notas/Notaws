@@ -1,0 +1,59 @@
+Parte 1 "Configuracion de usuario"
+git config -- global user.name "insertar nombre"
+git config -- global user.email "insertar email"
+---------------------------------------------------
+Parte 2 "Comandos basicos"
+init:	iniciar git
+add: agrega archivos  (con git add . agrega todo)
+commit -m: crear version
+show: diferencias entre versiones
+log: ver los commit
+rm --cached: lo elimina del init de git, pero se deja en el disco
+status: ver el estado
+checkout: moverse entre ramas o commit
+history: historial :D
+-------------------------------------------------- 
+Parte 3 "Ramas creacion y fusion"
+branch "insertar nombre" : crea una rama
+branch -m : cambia el nombre de la rama
+merge: fusiona las ramas
+
+--------------------------------------------------
+Parte 4 "SSH llaves publicas y privadas"
+Generar una nueva llave SSH: esto en home
+
+ssh-keygen -t rsa -b 4096 -C "youremail@example.com" (mismo que github)
+
+-t Especifica el arlgoritmo
+-b Complejidad del algoritmo
+-c Correo que estara conectado
+
+Comprobar agregar ssh
+
+eval $(ssh-agent - s)
+ssh-add ~/.ssh/id_rsa  
+
+id_rsa		llave privada
+id_rsa_pub	llave publica
+
+en github se agrega la llave publica para hacer la conexion
+--------------------------------------------------
+Parte 5 "Repositorio remoto"
+
+git remote add origin urldelrepositoriodegithub<https-url>
+git remote set-url origin urldelrepositorioengithub<ssh-url>
+git remote -v (muestra que se cambie la url)
+git push origin main (porque github trabaja con main y no con master, aparte tambien sirve para enviar ramas)
+git pull origin main (para traer lo de github a local)
+
+
+git log --all --graph (ver lines)
+git log --all --graph --decorate --online (comprimido)
+alias arbolito="git log --all --graph --decorate --oneline" (con esto se hace que todos los comandos sean un comando nomas)
+Los tag sirven para cambiar los hash y especificar la version
+git tag -a v0.1 -m "Resultado de las primeras clases del curso" insertarhashcomoeste"c9b9b13"
+git push origin --tags (envia los tags a github) 
+git tag -d (elimina un tag)
+git push origin :refs/tags/nombre del tag (elimna en gihu)
+
+
